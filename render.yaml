@@ -1,11 +1,15 @@
 services:
-  - type: worker
+  - type: web
     name: candidate-support-automation
     env: node
     buildCommand: npm install
-    startCommand: node main-continuous.js
+    startCommand: node server.js
     envVars:
       - key: OPENAI_API_KEY
+        sync: false
+      - key: GMAIL_CREDENTIALS
+        sync: false
+      - key: GMAIL_TOKEN
         sync: false
       - key: OTOMEYT_LOGO_URL
         sync: false
