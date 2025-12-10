@@ -1,0 +1,8 @@
+node_modules/
+token.json
+credentials.json
+.env
+*.log
+prepare-render.sh
+prepare-render.ps1
+
